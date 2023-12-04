@@ -2,8 +2,9 @@ import java.util.*;
 
 public class PasswordGenerator {
     public static void main(String[] args){
-        int length = 10;
+        int length = 28;
         System.out.println(password(length));
+        System.out.println("Please remember this does not save, copy your password down!");
     }
     static char[] password(int len){
         System.out.println("Generating password using random() : ");
@@ -11,7 +12,7 @@ public class PasswordGenerator {
         String capitalChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String smallChars = "abcdefghijklmnopqrstuvwxyz";
         String numbers = "0123456789";
-        String specialChars = "!@#$%^&*_=+-/>?,.()";
+        String specialChars = "!@#$%^&*_=+-/>?.()";
         String values = capitalChars + smallChars + numbers + specialChars;
         Random random = new Random();
         char[] newPassword = new char[len];
